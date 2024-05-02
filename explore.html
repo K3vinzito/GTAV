@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorar - Mi primer sitio con Tailwind</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="w-[1920px] xsm:w-full mx-auto">
+        <nav class="bg-gray-800 flex justify-between lg:justify-start items-center">
+            <div class="logo flex-initial p-2 w-1/6">
+                <img src="img/logo.png" width="100" alt="">
+            </div>
+            <div class="links lg:block hidden w-1/6 md:w-4/6">
+                <ul class="flex menu items-center justify-center gap-5">
+                    <li><a href="index.html" class="link">Inicio</a></li>
+                    <li><a href="#" class="link">Explorar</a></li>
+                    <li><a href="contact.html" class="link">Contactos</a></li>
+                    <li><a href="buynow.html" class="border-4 border-yellow-400 text-white font-bold p-2 rounded-full align-middle transition duration-500 hover:bg-white hover:text-black">Comprar Ahora</a></li>
+                    <li><a href="playtogether.html" class="rounded-full bg-red-500 text-white font-bold px-4 py-3 hover:bg-white hover:text-black transition duration-500">Jugar Juntos</a></li>
+                </ul>
+            </div>
+
+            <div class="block lg:hidden w-1/6 lg:w-4/6">
+                <a href="#" class="link" id="mobile-menu">Menú</a>
+
+                <ul class="mobile-links hidden w-full absolute z-50 left-0 text-center bg-gray-800">
+                    <li><a href="index.html" class="link">Inicio</a></li>
+                    <li><a href="#" class="link">Explorar</a></li>
+                    <li><a href="contact.html" class="link">Contactos</a></li>
+                    <li><a href="buynow.html" class="border-4 border-yellow-400 text-white font-bold p-2 rounded-full align-middle transition duration-500 hover:bg-white hover:text-black">Comprar Ahora</a></li>
+                    <li><a href="playtogether.html" class="rounded-full bg-red-500 text-white font-bold px-4 py-3 hover:bg-white hover:text-black transition duration-500">Jugar Juntos</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="header">
+            <img src="img/explore_header.jpg" alt="">
+        </div>
+
+        <section class="py-20">
+            <div class="container mx-auto">
+                <h1 class="text-4xl font-bold text-center mb-10">Explora nuevos mundos</h1>
+
+                <!-- Carousel -->
+                <div class="carousel">
+                    <img src="img/explore_image1.jpg" alt="Explore Image 1" class="carousel-item">
+                    <img src="img/explore_image2.jpg" alt="Explore Image 2" class="carousel-item">
+                    <img src="img/explore_image3.jpg" alt="Explore Image 3" class="carousel-item">
+                </div>
+            </div>
+        </section>
+
+
+        <section class="bg-yellow-dots">
+            <div class="bg-wave-pink bg-repeat-x h-6 relative -top-4"></div>
+            <div class="xsm:w-full sm:container w-2/3 mx-auto md:flex justify-center items-center text-center py-6">
+                <div class="left xl:w-1/3 lg:w-1/2 p-5">
+                    <h3 class=" text-white font-black text-4xl py-8">Explorar</h3>
+                    <h2 class="text-white text-4xl font-bold text-center mb-10">Descubre nuevas aventuras</h2>
+                    <h3 class="text-white text-2xl font-bold mb-4">Explora misterios ocultos</h3>
+                    <p class="text-white text-lg">Descubre lugares secretos y resuelve enigmas.</p>
+                    <h3 class="text-white text-2xl font-bold mb-4">Conoce nuevas culturas</h3>
+                    <p class="text-white text-lg">Interactúa con personajes de diferentes mundos y aprende sus costumbres.</p>
+                    <h3 class="text-white text-2xl font-bold mb-4">Enfrenta desafíos emocionantes</h3>
+                    <p class="text-white text-lg">Lucha contra enemigos poderosos y demuestra tu valentía.</p>
+
+                </div>
+
+                <div class="right xl:w-1/3 lg:w-1/2">
+                    <img src="img/image6.png" class="md:w-full" alt="">
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-gray-800 text-white py-10">
+            <div class="container mx-auto text-center">
+                <p>&copy; 2024 Mi Primer Sitio con Tailwind. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const menuButton = document.querySelector('#mobile-menu');
+
+        menuButton.addEventListener('click', e => {
+            const menu = document.querySelector('.mobile-links');
+
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
